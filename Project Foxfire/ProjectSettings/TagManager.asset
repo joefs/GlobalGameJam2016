@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Fireball
+  - Gust
   layers:
   - Default
   - TransparentFX

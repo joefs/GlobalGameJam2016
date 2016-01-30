@@ -27,6 +27,13 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField]
 	private Transform firePrefab;
 
+
+	[SerializeField]
+	private Transform rockPrefab;
+
+	[SerializeField]
+	private Transform gustPrefab;
+
 	Dictionary<Direction, Vector3> m_directionVector;
 
 
@@ -159,11 +166,18 @@ public class PlayerController : MonoBehaviour {
 		void Gust()
 		{
 			Debug.Log("GUST");
+
+			Transform t = (Transform)Instantiate(gustPrefab, gameObject.transform.position - m_directionVector[facingDirection], Quaternion.identity);
+			GameObject currentGust = t.gameObject;
 		}
 
 		void InvisibleGust()
 		{
 			Debug.Log("INVISIBLE GUST");
+
+			Transform t = (Transform)Instantiate(gustPrefab, gameObject.transform.position - m_directionVector[facingDirection], Quaternion.identity);
+			GameObject currentGust = t.gameObject;
+			currentGust.GetComponent<GustScript>().GoTransparent();
 		}
 
 	void UseElementFire()
@@ -200,11 +214,17 @@ public class PlayerController : MonoBehaviour {
 		void Grow()
 		{
 			Debug.Log("GROW");
+			Transform t = (Transform)Instantiate(rockPrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
+			GameObject currentTree = t.gameObject;
+			currentTree.GetComponent<RockScript>().ConvertToTree();
 		}
 
 		void Rock()
 		{
 			Debug.Log("ROCK");
+			Transform t = (Transform)Instantiate(rockPrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
+			GameObject currentRock = t.gameObject;
+			currentRock.GetComponent<RockScript>().ConvertToRock();
 		}
 
 	void UseElementWater()
@@ -223,5 +243,23 @@ public class PlayerController : MonoBehaviour {
 			Debug.Log("FLOOD");
 		}
 
+
+	void Respawn()
+	{
+
+	}
+
+	public void Respawn_COMMAND()
+	{
+		Debug.Log("CHARACTER SHOULD BE SENT BACK");
+	}
+
+	void OnCollisionExit(Collision collisionInfo) {
+		if(collisionInfo.gameObject.tag == "Obstacle")
+		{
+			Debug.Log("ACCESSED");
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
+		}
+    }
 
 }
