@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField]
 	private Transform gustPrefab;
 
+	[SerializeField]
+	private Transform wavePrefab;
+
 	Dictionary<Direction, Vector3> m_directionVector;
 
 
@@ -236,11 +239,23 @@ public class PlayerController : MonoBehaviour {
 		void Wave()
 		{
 			Debug.Log("WAVE");
+
+			Transform t = (Transform)Instantiate(wavePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
+			GameObject currentWave = t.gameObject;
+			currentWave.GetComponent<WaveScript>().Launch(m_directionVector[facingDirection], 3.0f);
+			currentWave.GetComponent<WaveScript>().Launch(-1*m_directionVector[facingDirection], 3.0f);
 		}
 
 		void Flood()
 		{
 			Debug.Log("FLOOD");
+
+			Transform t = (Transform)Instantiate(wavePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
+			GameObject currentWave = t.gameObject;
+			currentWave.GetComponent<WaveScript>().Launch(m_directionVector[facingDirection], 3.0f);
+			t = (Transform)Instantiate(wavePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
+			currentWave = t.gameObject;
+			currentWave.GetComponent<WaveScript>().Launch(-1*m_directionVector[facingDirection], 3.0f);
 		}
 
 
@@ -255,7 +270,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnCollisionExit(Collision collisionInfo) {
-		if(collisionInfo.gameObject.tag == "Obstacle")
+		if(collisionInfo.gameObject.tag == "Obstacle" || collisionInfo.gameObject.tag == "Player")
 		{
 			Debug.Log("ACCESSED");
 			GetComponent<Rigidbody>().velocity = Vector3.zero;
