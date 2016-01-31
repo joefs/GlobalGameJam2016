@@ -33,14 +33,6 @@ public class WaveScript : MonoBehaviour {
 
     void OnTriggerEnter (Collider col)
     {
-        if(col.gameObject.tag == "Player")
-        {
-            // col.gameObject
-            // set the player gameobjects parent to this
-            // set a timer for it to be freed
-            col.gameObject.transform.parent = gameObject.transform;
-            DeparentInTime();
-        }
     }
 
 	void Kill()

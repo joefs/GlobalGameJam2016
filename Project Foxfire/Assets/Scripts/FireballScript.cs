@@ -36,10 +36,46 @@ public class FireballScript : MonoBehaviour {
         {
             Kill();
         }
+        else if(col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<PlayerController>().Respawn_COMMAND();
+
+            Destroy(gameObject);
+        }
     }
 
 	void Kill()
 	{
 		Destroy(gameObject);
 	}
+
+	void FixedUpdate()
+	{
+		GameObject go = WhatsThere(5.0f);
+		if(go!= null&&(go.tag=="Flood"||go.tag=="Wave"))
+		{
+			Kill();
+		}
+	}
+
+
+    GameObject WhatsThere(float pDist)
+    {
+    	GameObject retVal = null;
+	    RaycastHit hit;
+        Ray ray = new Ray(gameObject.transform.position + (velocity*Time.deltaTime), Quaternion.Euler(0,90,0 ) * velocity );// origin, dir
+        //Debug.Log("Ray is " + velocity);
+        Debug.DrawLine(gameObject.transform.position + (velocity*Time.deltaTime), gameObject.transform.position + (velocity.normalized * pDist), Color.green, 0.1f, false);
+	    if (Physics.Raycast(ray, out hit))
+	    {
+	        if (hit.collider != null )
+	        {
+	        	//Debug.Log("An object was hit and it was: " + hit.collider.gameObject);
+	        	 if(Vector3.Distance(gameObject.transform.position, hit.collider.gameObject.transform.position) < pDist)retVal = hit.collider.gameObject;
+	        }
+	    }
+	    return retVal;
+    }
+
+
 }

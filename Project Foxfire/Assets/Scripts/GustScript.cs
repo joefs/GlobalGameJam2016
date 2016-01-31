@@ -53,6 +53,7 @@ public class GustScript : MonoBehaviour {
 
             Destroy(gameObject);
         }
+        
     }
 
 }
