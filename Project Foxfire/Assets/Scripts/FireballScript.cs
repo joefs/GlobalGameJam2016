@@ -7,6 +7,8 @@ public class FireballScript : MonoBehaviour {
 
 	Vector3 initialPos;
 
+	public GameObject owner;
+
 	float maxDist;
 
 	// Use this for initialization
@@ -23,10 +25,11 @@ public class FireballScript : MonoBehaviour {
 
 	}
 
-	public void Launch(Vector3 pVec, float pSpeed, float newMaxDist = 3.0f)
+	public void Launch(Vector3 pVec, float pSpeed, float newMaxDist = 3.0f, GameObject pOwner = null)
 	{
 		velocity = pVec *  pSpeed;
 		maxDist = newMaxDist;
+		owner = pOwner;
 	}
 
 
@@ -36,8 +39,9 @@ public class FireballScript : MonoBehaviour {
         {
             Kill();
         }
-        else if(col.gameObject.tag == "Player")
+        else if(col.gameObject.tag == "Player" && col.gameObject!= owner)
         {
+        	Debug.Log(owner);
             col.gameObject.GetComponent<PlayerController>().Respawn_COMMAND();
 
             Destroy(gameObject);

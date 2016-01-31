@@ -9,6 +9,10 @@ TagManager:
   - Gust
   - Wave
   - Flood
+  - P1Spawn
+  - P2Spawn
+  - Shrine
+  - Fairy
   layers:
   - Default
   - TransparentFX

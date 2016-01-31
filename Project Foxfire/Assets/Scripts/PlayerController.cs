@@ -42,15 +42,53 @@ public class PlayerController : MonoBehaviour {
 	private Transform floodPrefab;
 
 
+	private Quaternion initialRotation;
+	private Vector3 initialPosition;
 
 
+	[SerializeField]
+	private GameObject soundController;
+
+	private SoundManager m_pSM;
+
+
+	bool hasRedFairy = false;
+	bool hasBlueFairy = false ;
+	bool hasGreenFairy = false;
+
+	void ResetFairies()
+	{
+		hasRedFairy = false;
+		hasBlueFairy = false ;
+		hasGreenFairy = false;
+	}
+
+	void GainFairy(FairyColor pColor)
+	{
+		if(pColor == FairyColor.RED) hasRedFairy = true;
+		else if(pColor == FairyColor.BLUE) hasBlueFairy = true;
+		else if(pColor == FairyColor.GREEN) hasGreenFairy = true;
+
+		if(hasRedFairy&&hasBlueFairy&&hasGreenFairy)
+		{
+			GameManager.globalInstance.OpenShrine();
+			ResetFairies();
+		}
+	}
+
+	bool HasFairyOfColor(FairyColor pColor)
+	{
+		if(pColor == FairyColor.RED) return hasRedFairy;
+		else if(pColor == FairyColor.BLUE) return hasBlueFairy;
+		else if(pColor == FairyColor.GREEN) return hasGreenFairy;
+		return true;
+	}
 
 
 	Dictionary<Direction, Vector3> m_directionVector;
 
 
-	[SerializeField]
-	private PlayerNumber m_playerNumber;
+	public PlayerNumber m_playerNumber;
 	// Use this for initialization
 	void Start ()
 	{
@@ -71,6 +109,12 @@ public class PlayerController : MonoBehaviour {
 
 
 		m_modelObject.GetComponent<Animation>().Play("Kitsune_Armature|Kitsune@Run");
+
+
+		if(soundController!=null) m_pSM = soundController.GetComponent<SoundManager>();
+
+		initialRotation = gameObject.transform.rotation;
+		initialPosition = gameObject.transform.position;
 
 	}
 	
@@ -162,7 +206,7 @@ public class PlayerController : MonoBehaviour {
 
         float fractionalDist = speed/15.0f;
 
-       // Debug.DrawLine(sourcePoint, gameObject.transform.position+ (m_directionVector[facingDirection].normalized * fractionalDist), Color.green, 0.1f, false);
+       Debug.DrawLine(sourcePoint, gameObject.transform.position+ (m_directionVector[facingDirection].normalized * fractionalDist), Color.green, 0.1f, false);
         if (Physics.Raycast(ray, out hit, 100)  && hit.rigidbody!= null && hit.rigidbody.gameObject.tag=="Obstacle" && Vector3.Distance(sourcePoint, hit.rigidbody.gameObject.transform.position) < fractionalDist)
         {
         	//Debug.Log("OBSTACLE IN THAT Direction");
@@ -200,32 +244,32 @@ public class PlayerController : MonoBehaviour {
 		currentPower = (currentPower + 1) % tailCount;
 	}
 
-	void LevelUp()
+	public void LevelUp()
 	{
 		tailCount++;
 		if(tailCount==WINNING_COUNT) Debug.Log("YOU WIN");//END GAME
 
-		speedMultiplier = Mathf.Lerp( 1,0.5f, (tailCount-1)/8.0f);
+		speedMultiplier = Mathf.Lerp( 1,0.7f, (tailCount-1)/8.0f);
 		//Debug.Log(speedMultiplier);
 		switch(tailCount)
 		{
 			case 2:
-				windFunc = InvisibleGust;
-				break;
-			case 3:
 				fireFunc = Fire;
 				break;
-			case 4:
-				fireFunc = Fireball;
-				break;
-			case 5:
+			case 3:
 				earthFunc = Grow;
 				break;
+			case 4:
+				waterFunc = Wave;
+				break;
+			case 5:
+				windFunc = InvisibleGust;
+				break;
 			case 6:
-				earthFunc = Rock;
+				fireFunc = Fireball;
 				break;
 			case 7:
-				waterFunc = Wave;
+				earthFunc = Rock;
 				break;
 			case 8:
 				waterFunc = Flood;
@@ -266,6 +310,8 @@ public class PlayerController : MonoBehaviour {
 				Transform t = (Transform)Instantiate(gustPrefab, gameObject.transform.position - m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentGust = t.gameObject;
 				windContainer.Fire(currentGust);
+
+				PlaySFX("Gust");
 			}
 			else
 			{
@@ -283,6 +329,9 @@ public class PlayerController : MonoBehaviour {
 				GameObject currentGust = t.gameObject;
 				currentGust.GetComponent<GustScript>().GoTransparent();
 				windContainer.Fire(currentGust);
+
+
+				PlaySFX("Gust");
 			}
 			else
 			{
@@ -304,8 +353,10 @@ public class PlayerController : MonoBehaviour {
 
 			Transform t = (Transform)Instantiate(firePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 			GameObject currentFireball = t.gameObject;
-			currentFireball.GetComponent<FireballScript>().Launch(m_directionVector[facingDirection], 10.0f, 4.0f);
+			currentFireball.GetComponent<FireballScript>().Launch(m_directionVector[facingDirection], 10.0f, 4.0f, gameObject);
 			fireContainer.Fire(currentFireball);
+
+			PlaySFX("Fire");
 		}
 
 		void Fireball()
@@ -313,8 +364,10 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("FIREBALL");
 			Transform t = (Transform)Instantiate(firePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 			GameObject currentFireball = t.gameObject;
-			currentFireball.GetComponent<FireballScript>().Launch(m_directionVector[facingDirection], 25.0f, 40f);
+			currentFireball.GetComponent<FireballScript>().Launch(m_directionVector[facingDirection], 25.0f, 40f, gameObject);
 			fireContainer.Fire(currentFireball);
+
+			PlaySFX("Fire");
 		}
 
 	void UseElementEarth()
@@ -337,6 +390,8 @@ public class PlayerController : MonoBehaviour {
 				GameObject currentTree = t.gameObject;
 				currentTree.GetComponent<RockScript>().ConvertToTree();
 				earthContainer.Fire(currentTree);
+
+				PlaySFX("Bush");
 			}
 			else
 			{
@@ -355,6 +410,8 @@ public class PlayerController : MonoBehaviour {
 				GameObject currentRock = t.gameObject;
 				currentRock.GetComponent<RockScript>().ConvertToRock();
 				earthContainer.Fire(currentRock);
+
+				PlaySFX("Rock");
 			}
 			else
 			{
@@ -379,6 +436,8 @@ public class PlayerController : MonoBehaviour {
 				waterContainer.Fire(currentWave);
 			}
 
+				PlaySFX("Wave");
+
 		}
 
 		void Flood()
@@ -388,17 +447,21 @@ public class PlayerController : MonoBehaviour {
 			GameObject currentFlood = t.gameObject;
 			currentFlood.GetComponent<FloodScript>().RegisterOwner(gameObject);
 			waterContainer.Fire(currentFlood);
+
+			PlaySFX("Flood");
 		}
 
 
 	void Respawn()
 	{
-
+		gameObject.transform.position = initialPosition;
+		gameObject.transform.rotation = initialRotation;
 	}
 
 	public void Respawn_COMMAND()
 	{
 		Debug.Log("CHARACTER SHOULD BE SENT BACK");
+		Respawn();
 	}
 
 	void OnCollisionExit(Collision collisionInfo) {
@@ -448,6 +511,27 @@ public class PlayerController : MonoBehaviour {
 		{
 			//Debug.LogError("Wave HIT SOMEONE");
 			COMMAND_ImpartCardinalPush (col.gameObject.transform.position, 1.0f, 8.0f);
+		}
+		else if((m_playerNumber == PlayerNumber.P1 && col.gameObject.tag == "P2Spawn" )||
+			(m_playerNumber == PlayerNumber.P2 && col.gameObject.tag == "P1Spawn" ))
+		{
+			Respawn_COMMAND();
+		}
+		else if( col.gameObject.tag == "Shrine" )
+		{
+			if(GameManager.globalInstance != null && GameManager.globalInstance.IsShrineOpen())
+			{
+				GameManager.globalInstance.PrayAtShrine(this);
+			}
+		}
+		else if( col.gameObject.tag == "Fairy" )
+		{
+			FairyScript fs = col.gameObject.GetComponent<FairyScript>();
+			if(fs!= null && !HasFairyOfColor(fs.m_Color))
+			{
+				GainFairy(fs.m_Color);
+				Destroy(col.gameObject);
+			}
 		}
     }
 
@@ -530,6 +614,14 @@ public class PlayerController : MonoBehaviour {
 	    }
 	    return retVal;
     }
+
+
+	void PlaySFX(string pStr)
+	{
+		if(m_pSM!=null)m_pSM.Play(pStr);
+	}
+
+
 
 }
 
