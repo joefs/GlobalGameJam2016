@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour {
 			m_velocity = Vector3.zero;
 		}
 
-		if(Input.GetKeyUp(KeyCode.Space) )LevelUp();
+		//if(Input.GetKeyUp(KeyCode.Space) )LevelUp();
 
 	}
 
@@ -305,7 +305,7 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("GUST");
 
 			GameObject go = WhatsThere(gameObject.transform.position, (Direction)((((int)facingDirection)+2)%4), 2.0f);
-			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"))
+			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"&&go.tag!="P1Spawn"&&go.tag!="P2Spawn"))
 			{
 				Transform t = (Transform)Instantiate(gustPrefab, gameObject.transform.position - m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentGust = t.gameObject;
@@ -323,7 +323,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			//Debug.Log("INVISIBLE GUST");
 			GameObject go = WhatsThere(gameObject.transform.position, (Direction)((((int)facingDirection)+2)%4), 2.0f);
-			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"))
+			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"&&go.tag!="P1Spawn"&&go.tag!="P2Spawn"))
 			{
 				Transform t = (Transform)Instantiate(gustPrefab, gameObject.transform.position - m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentGust = t.gameObject;
@@ -384,7 +384,7 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("GROW");
 
 			GameObject go = WhatsThere(gameObject.transform.position, facingDirection, 2.0f);
-			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"))
+			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"&&go.tag!="P1Spawn"&&go.tag!="P2Spawn"))
 			{
 				Transform t = (Transform)Instantiate(rockPrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentTree = t.gameObject;
@@ -404,7 +404,7 @@ public class PlayerController : MonoBehaviour {
 			Debug.Log("ROCK");
 
 			GameObject go = WhatsThere(gameObject.transform.position, facingDirection, 2.0f);
-			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"))
+			if(go== null||(go.tag!="Gust"&&go.tag!="Obstacle"&&go.tag!="P1Spawn"&&go.tag!="P2Spawn"))
 			{
 				Transform t = (Transform)Instantiate(rockPrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentRock = t.gameObject;

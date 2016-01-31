@@ -51,12 +51,14 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		/*
 		if(Input.GetKeyUp(KeyCode.G))
 		{
 			m_isShrineOpen = !m_isShrineOpen;
 			if(m_isShrineOpen)Debug.Log("Shrine Open");
 			else Debug.Log("Shrine Open");
 		}
+		*/
 	}
 
 
