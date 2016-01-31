@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 	bool hasBlueFairy = false ;
 	bool hasGreenFairy = false;
 
-	void ResetFairies()
+	public void ResetFairies()
 	{
 		hasRedFairy = false;
 		hasBlueFairy = false ;
@@ -72,7 +72,6 @@ public class PlayerController : MonoBehaviour {
 		if(hasRedFairy&&hasBlueFairy&&hasGreenFairy)
 		{
 			GameManager.globalInstance.OpenShrine();
-			ResetFairies();
 		}
 	}
 
@@ -133,7 +132,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		m_isRunning = false;
 		Vector3 unitVelo = Vector2.zero;
-		if(m_playerNumber == PlayerNumber.P1)
+		if(m_playerNumber == PlayerNumber.P2)
 		{
 			if (Input.GetKey(KeyCode.I)) {unitVelo.z+=1; facingDirection = Direction.UP; RunIfAppropriate(); }
 			else if (Input.GetKey(KeyCode.J)) {unitVelo.x-=1; facingDirection = Direction.LEFT; RunIfAppropriate(); }
@@ -156,7 +155,7 @@ public class PlayerController : MonoBehaviour {
 
 
 		}
-		else if(m_playerNumber == PlayerNumber.P2)
+		else if(m_playerNumber == PlayerNumber.P1)
 		{
 			if (Input.GetKey(KeyCode.W)) {unitVelo.z+=1; facingDirection = Direction.UP; RunIfAppropriate(); }
 			else if (Input.GetKey(KeyCode.A)) {unitVelo.x-=1; facingDirection = Direction.LEFT; RunIfAppropriate(); }
@@ -247,8 +246,19 @@ public class PlayerController : MonoBehaviour {
 	public void LevelUp()
 	{
 		tailCount++;
-		if(tailCount==WINNING_COUNT) Debug.Log("YOU WIN");//END GAME
-
+		if(tailCount==WINNING_COUNT)
+		{
+			Debug.Log("YOU WIN");//END GAME
+			if(PlayerNumber.P1 == m_playerNumber)
+			{
+				GameOverScreenController.gameOverMessage = "Player 1 Wins!";
+			}
+			else
+			{
+				GameOverScreenController.gameOverMessage = "Player 2 Wins!";
+			}
+			Application.LoadLevel("GameOverScene");
+		}
 		speedMultiplier = Mathf.Lerp( 1,0.7f, (tailCount-1)/8.0f);
 		//Debug.Log(speedMultiplier);
 		switch(tailCount)
@@ -499,6 +509,11 @@ public class PlayerController : MonoBehaviour {
 		}
     }
 
+    bool HasAllFairies()
+    {
+    	return hasRedFairy&&hasBlueFairy&&hasGreenFairy;
+    }
+
 
 	void OnTriggerEnter (Collider col)
     {
@@ -519,9 +534,11 @@ public class PlayerController : MonoBehaviour {
 		}
 		else if( col.gameObject.tag == "Shrine" )
 		{
-			if(GameManager.globalInstance != null && GameManager.globalInstance.IsShrineOpen())
+			if(GameManager.globalInstance != null && GameManager.globalInstance.IsShrineOpen() && HasAllFairies())
 			{
 				GameManager.globalInstance.PrayAtShrine(this);
+
+				ResetFairies();
 			}
 		}
 		else if( col.gameObject.tag == "Fairy" )
@@ -621,7 +638,10 @@ public class PlayerController : MonoBehaviour {
 		if(m_pSM!=null)m_pSM.Play(pStr);
 	}
 
-
+	public int GetLevel()
+	{
+		return tailCount;
+	}
 
 }
 

@@ -27,6 +27,13 @@ public class GameManager : MonoBehaviour {
 	PlayerController p1Contr;
 	PlayerController p2Contr;
 
+	[SerializeField]
+	UnityEngine.UI.Text p1LevelLabel;
+
+	[SerializeField]
+	UnityEngine.UI.Text p2LevelLabel;
+	
+
 
 	// Use this for initialization
 	void Start () {
@@ -65,14 +72,12 @@ public class GameManager : MonoBehaviour {
 	public void OpenShrine()
 	{
 		m_isShrineOpen = true;
-		KillFairies();
 	}
 
 
 	private void CloseShrine()
 	{
 		m_isShrineOpen = false;
-		SpawnFairies();
 	}
 
 	public bool IsShrineOpen()
@@ -83,9 +88,21 @@ public class GameManager : MonoBehaviour {
 	public void PrayAtShrine(PlayerController pPlayer)
 	{
 		pPlayer.LevelUp();
+		if(pPlayer.m_playerNumber == PlayerNumber.P1 && p1LevelLabel!=null)
+		{
+			 p1LevelLabel.text = "P1 Lvl: " + pPlayer.GetLevel();
+		}
+		else if(pPlayer.m_playerNumber == PlayerNumber.P2 && p1LevelLabel!=null)
+		{
+			 p2LevelLabel.text = "P2 Lvl: " + pPlayer.GetLevel();
+		}
 		p1Contr.Respawn_COMMAND();
+		p1Contr.ResetFairies();
 		p2Contr.Respawn_COMMAND();
+		p2Contr.ResetFairies();
+		KillFairies();
 		CloseShrine();
+		SpawnFairies();
 	}
 
 	GameObject[] fairies;
