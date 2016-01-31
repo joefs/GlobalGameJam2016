@@ -51,14 +51,15 @@ public class FireballScript : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		/*
 		GameObject go = WhatsThere(5.0f);
 		if(go!= null&&(go.tag=="Flood"||go.tag=="Wave"))
 		{
 			Kill();
-		}
+		}*/
 	}
 
-
+/*
     GameObject WhatsThere(float pDist)
     {
     	GameObject retVal = null;
@@ -75,7 +76,7 @@ public class FireballScript : MonoBehaviour {
 	        }
 	    }
 	    return retVal;
-    }
+    }*/
 
 
 }

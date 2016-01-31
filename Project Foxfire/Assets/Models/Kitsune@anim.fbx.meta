@@ -163,8 +163,10 @@ ModelImporter:
     400152: thigh.R
     400154: UpperArm.L
     400156: UpperArm.R
+    2300000: Kitsune
+    3300000: Kitsune
     4300000: Kitsune
-    7400000: Kitsune_Armature|Kitsune@Bark
+    7400000: anim
     7400002: Kitsune_Armature|Kitsune@blownaway
     7400004: Kitsune_Armature|Kitsune@Damage
     7400006: Kitsune_Armature|Kitsune@Dig
@@ -172,6 +174,7 @@ ModelImporter:
     7400010: Kitsune_Armature|Kitsune@Run
     7400012: Kitsune|Kitsune@Run
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Kitsune
   materials:
     importMaterials: 1
@@ -191,9 +194,1311 @@ ModelImporter:
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: anim
+      takeName: Kitsune_Armature|Kitsune@Bark
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kitsune
+        weight: 1
+      - path: Kitsune_Armature
+        weight: 1
+      - path: Kitsune_Armature/Root
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L/Ear.002.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R/Ear.002.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw/Jaw_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L/LowerArm.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R/LowerArm.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003/Tail1.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L/Tail2.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R/Tail2.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L/Tail4.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R/Tail4.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003/Tail6.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L/Tail8.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R/Tail8.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003/Tail9.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L/Calf.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R/Calf.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L/IK_Back.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R/IK_Back.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L/IK_front.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R/IK_front.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kitsune_Armature|Kitsune@blownaway
+      takeName: Kitsune_Armature|Kitsune@blownaway
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kitsune
+        weight: 1
+      - path: Kitsune_Armature
+        weight: 1
+      - path: Kitsune_Armature/Root
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L/Ear.002.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R/Ear.002.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw/Jaw_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L/LowerArm.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R/LowerArm.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003/Tail1.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L/Tail2.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R/Tail2.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L/Tail4.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R/Tail4.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003/Tail6.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L/Tail8.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R/Tail8.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003/Tail9.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L/Calf.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R/Calf.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L/IK_Back.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R/IK_Back.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L/IK_front.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R/IK_front.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kitsune_Armature|Kitsune@Damage
+      takeName: Kitsune_Armature|Kitsune@Damage
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kitsune
+        weight: 1
+      - path: Kitsune_Armature
+        weight: 1
+      - path: Kitsune_Armature/Root
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L/Ear.002.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R/Ear.002.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw/Jaw_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L/LowerArm.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R/LowerArm.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003/Tail1.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L/Tail2.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R/Tail2.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L/Tail4.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R/Tail4.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003/Tail6.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L/Tail8.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R/Tail8.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003/Tail9.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L/Calf.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R/Calf.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L/IK_Back.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R/IK_Back.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L/IK_front.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R/IK_front.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kitsune_Armature|Kitsune@Dig
+      takeName: Kitsune_Armature|Kitsune@Dig
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kitsune
+        weight: 1
+      - path: Kitsune_Armature
+        weight: 1
+      - path: Kitsune_Armature/Root
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L/Ear.002.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R/Ear.002.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw/Jaw_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L/LowerArm.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R/LowerArm.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003/Tail1.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L/Tail2.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R/Tail2.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L/Tail4.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R/Tail4.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003/Tail6.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L/Tail8.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R/Tail8.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003/Tail9.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L/Calf.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R/Calf.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L/IK_Back.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R/IK_Back.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L/IK_front.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R/IK_front.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kitsune_Armature|Kitsune@Idle
+      takeName: Kitsune_Armature|Kitsune@Idle
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kitsune
+        weight: 1
+      - path: Kitsune_Armature
+        weight: 1
+      - path: Kitsune_Armature/Root
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L/Ear.002.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R/Ear.002.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw/Jaw_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L/LowerArm.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R/LowerArm.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003/Tail1.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L/Tail2.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R/Tail2.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L/Tail4.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R/Tail4.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003/Tail6.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L/Tail8.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R/Tail8.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003/Tail9.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L/Calf.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R/Calf.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L/IK_Back.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R/IK_Back.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L/IK_front.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R/IK_front.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kitsune_Armature|Kitsune@Run
+      takeName: Kitsune_Armature|Kitsune@Run
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kitsune
+        weight: 1
+      - path: Kitsune_Armature
+        weight: 1
+      - path: Kitsune_Armature/Root
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L/Ear.002.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R/Ear.002.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw/Jaw_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L/LowerArm.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R/LowerArm.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003/Tail1.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L/Tail2.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R/Tail2.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L/Tail4.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R/Tail4.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003/Tail6.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L/Tail8.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R/Tail8.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003/Tail9.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L/Calf.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R/Calf.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L/IK_Back.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R/IK_Back.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L/IK_front.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R/IK_front.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kitsune|Kitsune@Run
+      takeName: Kitsune|Kitsune@Run
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Kitsune
+        weight: 1
+      - path: Kitsune_Armature
+        weight: 1
+      - path: Kitsune_Armature/Root
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.L/Ear.002.L/Ear.002.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Ear.001.R/Ear.002.R/Ear.002.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Head/Jaw/Jaw_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.L/UpperArm.L/LowerArm.L/LowerArm.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Spine1/Spine2/Spine3/Spine4/Shoulder.R/UpperArm.R/LowerArm.R/LowerArm.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail1.001/Tail1.002/Tail1.003/Tail1.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.L/Tail2.002.L/Tail2.003.L/Tail2.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail2.001.R/Tail2.002.R/Tail2.003.R/Tail2.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.L/Tail4.002.L/Tail4.003.L/Tail4.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail4.001.R/Tail4.002.R/Tail4.003.R/Tail4.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail6.001/tail6.002/Tail6.003/Tail6.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.L/Tail8.002.L/Tail8.003.L/Tail8.003.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail8.001.R/Tail8.002.R/Tail8.003.R/Tail8.003.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/Tail_Parent/Tail9.001/Tail9.002/Tail9.003/Tail9.003_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.L/Leg.L/Calf.L/Calf.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R
+        weight: 1
+      - path: Kitsune_Armature/Root/Hip.001/thigh.R/Leg.R/Calf.R/Calf.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.L/IK_Back.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_Back.R/IK_Back.R_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.L/IK_front.L_end
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R
+        weight: 1
+      - path: Kitsune_Armature/Root/IK_front.R/IK_front.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -231,7 +1536,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

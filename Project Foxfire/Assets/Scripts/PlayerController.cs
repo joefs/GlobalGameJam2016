@@ -42,12 +42,6 @@ public class PlayerController : MonoBehaviour {
 	private Transform floodPrefab;
 
 
-/*
-	CooldownItem m_fireWeapon;
-	CooldownItem m_earthWeapon;
-	CooldownItem m_waterWeapon;
-	CooldownItem m_windWeapon;
-*/
 
 
 
@@ -70,9 +64,13 @@ public class PlayerController : MonoBehaviour {
 		m_directionVector.Add(Direction.RIGHT, new Vector3(1,0,0));
 
 
+		fireContainer = new ProjectileContainer(10,0.2f);
+		waterContainer = new ProjectileContainer(1, 10.0f);
+		windContainer = new ProjectileContainer(5,2.0f);
+		earthContainer = new ProjectileContainer(3,10.0f);
 
 
-
+		m_modelObject.GetComponent<Animation>().Play("Kitsune_Armature|Kitsune@Run");
 
 	}
 	
@@ -85,15 +83,26 @@ public class PlayerController : MonoBehaviour {
 		m_velocity = Vector3.zero;
 	}
 
+	bool m_isRunning;
+
 	void HandleInput()
 	{
+		m_isRunning = false;
 		Vector3 unitVelo = Vector2.zero;
 		if(m_playerNumber == PlayerNumber.P1)
 		{
-			if (Input.GetKey(KeyCode.I)) {unitVelo.z+=1; facingDirection = Direction.UP; }
-			else if (Input.GetKey(KeyCode.J)) {unitVelo.x-=1; facingDirection = Direction.LEFT; }
-			else if (Input.GetKey(KeyCode.K)) {unitVelo.z-=1; facingDirection = Direction.DOWN; }
-			else if (Input.GetKey(KeyCode.L)) {unitVelo.x+=1; facingDirection = Direction.RIGHT; }
+			if (Input.GetKey(KeyCode.I)) {unitVelo.z+=1; facingDirection = Direction.UP; RunIfAppropriate(); }
+			else if (Input.GetKey(KeyCode.J)) {unitVelo.x-=1; facingDirection = Direction.LEFT; RunIfAppropriate(); }
+			else if (Input.GetKey(KeyCode.K)) {unitVelo.z-=1; facingDirection = Direction.DOWN; RunIfAppropriate(); }
+			else if (Input.GetKey(KeyCode.L)) {unitVelo.x+=1; facingDirection = Direction.RIGHT; RunIfAppropriate(); }
+			else
+			{
+
+				if(m_modelObject.GetComponent<Animation>().IsPlaying("Kitsune_Armature|Kitsune@Idle") == false)
+				{
+					m_modelObject.GetComponent<Animation>().Play("Kitsune_Armature|Kitsune@Idle");
+				}
+			}
 
 
 			if(Input.GetKeyUp(KeyCode.Alpha7)) UseElementWind();
@@ -105,10 +114,18 @@ public class PlayerController : MonoBehaviour {
 		}
 		else if(m_playerNumber == PlayerNumber.P2)
 		{
-			if (Input.GetKey(KeyCode.W)) {unitVelo.z+=1; facingDirection = Direction.UP; }
-			else if (Input.GetKey(KeyCode.A)) {unitVelo.x-=1; facingDirection = Direction.LEFT; }
-			else if (Input.GetKey(KeyCode.S)) {unitVelo.z-=1; facingDirection = Direction.DOWN; }
-			else if (Input.GetKey(KeyCode.D)) {unitVelo.x+=1; facingDirection = Direction.RIGHT; }
+			if (Input.GetKey(KeyCode.W)) {unitVelo.z+=1; facingDirection = Direction.UP; RunIfAppropriate(); }
+			else if (Input.GetKey(KeyCode.A)) {unitVelo.x-=1; facingDirection = Direction.LEFT; RunIfAppropriate(); }
+			else if (Input.GetKey(KeyCode.S)) {unitVelo.z-=1; facingDirection = Direction.DOWN; RunIfAppropriate(); }
+			else if (Input.GetKey(KeyCode.D)) {unitVelo.x+=1; facingDirection = Direction.RIGHT; RunIfAppropriate(); }
+			else
+			{
+
+				if(m_modelObject.GetComponent<Animation>().IsPlaying("Kitsune_Armature|Kitsune@Idle") == false)
+				{
+					m_modelObject.GetComponent<Animation>().Play("Kitsune_Armature|Kitsune@Idle");
+				}
+			}
 
 			if(Input.GetKeyUp(KeyCode.Alpha1)) UseElementWind();
 			else if(Input.GetKeyUp(KeyCode.Alpha2)) UseElementFire();
@@ -119,6 +136,7 @@ public class PlayerController : MonoBehaviour {
 		if(IsDirectionFreeOfObstacles(m_directionVector[facingDirection]) && m_isPinned == false)
 		{
 			m_velocity = (unitVelo.normalized * speed * speedMultiplier) + m_pushVec;	
+			m_isRunning = true;
 		}
 		else
 		{
@@ -159,9 +177,22 @@ public class PlayerController : MonoBehaviour {
 		ChangeToAnimState(facingDirection);
 	}
 
+	[SerializeField]
+	GameObject m_modelObject;
+
 	void ChangeToAnimState(Direction pDirection)
 	{
 		// change to directional animation track and pause if not moving
+		m_modelObject.transform.rotation = Quaternion.Euler(0,90*( -1 * (int)facingDirection),0);
+		
+	}
+
+	void RunIfAppropriate()
+	{
+		if(m_modelObject.GetComponent<Animation>().IsPlaying("Kitsune_Armature|Kitsune@Run") == false )
+		{
+			m_modelObject.GetComponent<Animation>().Play("Kitsune_Armature|Kitsune@Run");
+		}
 	}
 
 	void CyclePowers()
@@ -208,9 +239,20 @@ public class PlayerController : MonoBehaviour {
 	System.Action earthFunc = null;
 	System.Action waterFunc = null;
 
+
+	ProjectileContainer fireContainer;
+	ProjectileContainer waterContainer;
+	ProjectileContainer windContainer;
+	ProjectileContainer earthContainer;
+
+
+
+
+
+
 	void UseElementWind()
 	{
-		windFunc.Invoke();
+		if(windContainer.CanFire() )windFunc.Invoke();
 	}
 
 
@@ -223,7 +265,7 @@ public class PlayerController : MonoBehaviour {
 			{
 				Transform t = (Transform)Instantiate(gustPrefab, gameObject.transform.position - m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentGust = t.gameObject;
-				Debug.Log(go);
+				windContainer.Fire(currentGust);
 			}
 			else
 			{
@@ -240,6 +282,7 @@ public class PlayerController : MonoBehaviour {
 				Transform t = (Transform)Instantiate(gustPrefab, gameObject.transform.position - m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentGust = t.gameObject;
 				currentGust.GetComponent<GustScript>().GoTransparent();
+				windContainer.Fire(currentGust);
 			}
 			else
 			{
@@ -249,7 +292,7 @@ public class PlayerController : MonoBehaviour {
 
 	void UseElementFire()
 	{
-		if(fireFunc!=null) fireFunc.Invoke();
+		if(fireFunc!=null && fireContainer.CanFire() ) fireFunc.Invoke();
 		else Debug.Log("NO FIRE FUNCTION");
 	}
 
@@ -262,6 +305,7 @@ public class PlayerController : MonoBehaviour {
 			Transform t = (Transform)Instantiate(firePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 			GameObject currentFireball = t.gameObject;
 			currentFireball.GetComponent<FireballScript>().Launch(m_directionVector[facingDirection], 10.0f, 4.0f);
+			fireContainer.Fire(currentFireball);
 		}
 
 		void Fireball()
@@ -270,11 +314,12 @@ public class PlayerController : MonoBehaviour {
 			Transform t = (Transform)Instantiate(firePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 			GameObject currentFireball = t.gameObject;
 			currentFireball.GetComponent<FireballScript>().Launch(m_directionVector[facingDirection], 25.0f, 40f);
+			fireContainer.Fire(currentFireball);
 		}
 
 	void UseElementEarth()
 	{
-		if(earthFunc!=null)earthFunc.Invoke();
+		if(earthFunc!=null && earthContainer.CanFire() )earthFunc.Invoke();
 		else Debug.Log("NO EARTH FUNCTION");
 	}	
 
@@ -291,6 +336,7 @@ public class PlayerController : MonoBehaviour {
 				Transform t = (Transform)Instantiate(rockPrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentTree = t.gameObject;
 				currentTree.GetComponent<RockScript>().ConvertToTree();
+				earthContainer.Fire(currentTree);
 			}
 			else
 			{
@@ -308,6 +354,7 @@ public class PlayerController : MonoBehaviour {
 				Transform t = (Transform)Instantiate(rockPrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.identity);
 				GameObject currentRock = t.gameObject;
 				currentRock.GetComponent<RockScript>().ConvertToRock();
+				earthContainer.Fire(currentRock);
 			}
 			else
 			{
@@ -317,7 +364,7 @@ public class PlayerController : MonoBehaviour {
 
 	void UseElementWater()
 	{
-		if(waterFunc!=null)waterFunc.Invoke();
+		if(waterFunc!=null && waterContainer.CanFire() )waterFunc.Invoke();
 		else Debug.Log("NO WATER FUNCTION");
 	}
 
@@ -329,6 +376,7 @@ public class PlayerController : MonoBehaviour {
 				Transform t = (Transform)Instantiate(wavePrefab, gameObject.transform.position + m_directionVector[facingDirection], Quaternion.Euler(0, 90*(1+(int)facingDirection), 0));
 				GameObject currentWave = t.gameObject;
 				currentWave.GetComponent<WaveScript>().Launch(m_directionVector[facingDirection], 3.0f);
+				waterContainer.Fire(currentWave);
 			}
 
 		}
@@ -339,6 +387,7 @@ public class PlayerController : MonoBehaviour {
 			Transform t = (Transform)Instantiate(floodPrefab, gameObject.transform.position, Quaternion.identity);
 			GameObject currentFlood = t.gameObject;
 			currentFlood.GetComponent<FloodScript>().RegisterOwner(gameObject);
+			waterContainer.Fire(currentFlood);
 		}
 
 
@@ -484,34 +533,33 @@ public class PlayerController : MonoBehaviour {
 
 }
 
-[System.Serializable]
-public class CooldownItem
+public class ProjectileContainer
 {
-	int m_currentStacks;
-	int m_maxStacks;
-	float m_loadTime;
-	bool CanFire()
+	GameObject[] m_currentItems;
+	int currentIndex;
+	float whenItCanFireAgain;
+	float coolDownTime;
+
+	public ProjectileContainer(int count, float pCoolDownTime)
 	{
-		if(m_currentStacks>0) return true;
-		return false;
-	}
-	void Recharge()
-	{
-		if(m_currentStacks<m_maxStacks)m_currentStacks++;
-		else m_currentStacks = m_maxStacks;
-	}
-	void Discharge()
-	{
-		m_currentStacks--;
-		if(m_currentStacks<0) m_currentStacks = 0;
+		m_currentItems = new GameObject[count];
+		currentIndex = 0;
+		whenItCanFireAgain = Time.deltaTime;
+		coolDownTime = pCoolDownTime;
 	}
 
-	void Fire( System.Action pAction)
+	public void Fire(GameObject pGO)
 	{
-		if(CanFire())
-		{
-			Discharge();
-			pAction.Invoke();
-		}
+		GameObject.Destroy(m_currentItems[currentIndex]);
+		m_currentItems[currentIndex] = pGO;
+		currentIndex = (currentIndex+1)%m_currentItems.Length;
+		whenItCanFireAgain = Time.time + coolDownTime;
 	}
+
+	public bool CanFire()
+	{
+		if(Time.time> whenItCanFireAgain) return true;
+		else return false;
+	}
+
 }
