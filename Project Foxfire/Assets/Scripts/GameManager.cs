@@ -42,12 +42,14 @@ public class GameManager : MonoBehaviour {
 		Transform t = (Transform)Instantiate(playerPrefab, m_p1SpawnLocation.transform.position, Quaternion.identity);
 		t.gameObject.GetComponent<PlayerController>().m_playerNumber = (PlayerNumber)0;
 		p1Contr = t.gameObject.GetComponent<PlayerController>();
+		SmashCamScript.AddTrackChar(t.gameObject);
 
 
 
 		t = (Transform)Instantiate(playerPrefab, m_p2SpawnLocation.transform.position, Quaternion.identity);
 		t.gameObject.GetComponent<PlayerController>().m_playerNumber = (PlayerNumber)1;
 		p2Contr = t.gameObject.GetComponent<PlayerController>();
+		SmashCamScript.AddTrackChar(t.gameObject);
 
 		m_isShrineOpen = false;
 
