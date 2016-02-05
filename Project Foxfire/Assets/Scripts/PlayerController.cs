@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour {
 			else if(Input.GetKeyUp(KeyCode.Alpha4)) UseElementWater();
 
 		}
-		if(IsDirectionFreeOfObstacles(m_directionVector[facingDirection]) && m_isPinned == false)
+		if(/*IsDirectionFreeOfObstacles(m_directionVector[facingDirection]) && */m_isPinned == false)
 		{
 			m_velocity = (unitVelo.normalized * speed * speedMultiplier) + m_pushVec;	
 			m_isRunning = true;
