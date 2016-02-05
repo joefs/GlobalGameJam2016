@@ -22,7 +22,10 @@ public class WaveScript : MonoBehaviour {
 
 	}
 
-
+	public Vector3 GetVelocity()
+	{
+		return velocity;
+	}
 
 	public void Launch(Vector3 pVec, float pSpeed, float newMaxDist = 100.0f)
 	{

@@ -520,12 +520,12 @@ public class PlayerController : MonoBehaviour {
 		if(col.gameObject.tag == "Flood" && col.gameObject.GetComponent<FloodScript>().IsOwnedBy(gameObject) == false)
 		{
 			//Debug.LogError("FLOOD HIT SOMEONE");
-			COMMAND_ImpartPush(col.gameObject.transform.position, 3.0f, 3.0f);
+			COMMAND_ImpartPush(col.gameObject.transform.position, 3.0f, 12.0f);
 		}
 		else if( col.gameObject.tag == "Wave" )
 		{
 			//Debug.LogError("Wave HIT SOMEONE");
-			COMMAND_ImpartCardinalPush (col.gameObject.transform.position, 1.0f, 8.0f);
+			COMMAND_ImpartCardinalPush (col.gameObject.GetComponent<WaveScript>().GetVelocity(), 1.0f, 8.0f);
 		}
 		else if((m_playerNumber == PlayerNumber.P1 && col.gameObject.tag == "P2Spawn" )||
 			(m_playerNumber == PlayerNumber.P2 && col.gameObject.tag == "P1Spawn" ))
@@ -582,23 +582,24 @@ public class PlayerController : MonoBehaviour {
     	m_isPinned = false;
     }
 
-    public void COMMAND_ImpartCardinalPush(Vector3 pSource, float pTime, float pPushSpeed)
+    public void COMMAND_ImpartCardinalPush(Vector3 pDir, float pTime, float pPushSpeed)
     {
     	if(m_isBeingPushed==false)
     	{
     		Func<float, float> pPushFunc =(float r)=>{ return Mathf.Sin(r * Mathf.PI);};
-    		StartCoroutine(ImpartCardinalPush(pSource,pPushFunc, pTime, pPushSpeed));
+    		StartCoroutine(ImpartCardinalPush(pDir,pPushFunc, pTime, pPushSpeed));
     	}
     }
 
-    private IEnumerator ImpartCardinalPush(Vector3 pSource, Func<float, float> pPushFunc, float pTime, float pPushSpeed)
+    private IEnumerator ImpartCardinalPush(Vector3 pDir, Func<float, float> pPushFunc, float pTime, float pPushSpeed)
     {
     	float elapsedTime = 0.0f;
     	m_isBeingPushed = true;
     	while(elapsedTime<pTime)
     	{
     		elapsedTime+= Time.deltaTime;
-    		Vector3 diff =  pSource-gameObject.transform.position;
+    		/*
+    		Vector3 diff =  pDir-gameObject.transform.position;
 
 
 				if( Mathf.Abs(diff.x) > Mathf.Abs(diff.z) )
@@ -609,10 +610,10 @@ public class PlayerController : MonoBehaviour {
 				{
 					diff= new Vector3(0,0,0.5f) * ((diff.z<=0)? 1: -1) ;
 				}
+			*/
 
 
-
-    		m_pushVec = diff.normalized * pPushSpeed * pPushFunc(elapsedTime/pTime);
+    		m_pushVec = pDir.normalized * pPushSpeed * pPushFunc(elapsedTime/pTime);
     		yield return new WaitForEndOfFrame();
     	}
     	m_pushVec = Vector3.zero;
