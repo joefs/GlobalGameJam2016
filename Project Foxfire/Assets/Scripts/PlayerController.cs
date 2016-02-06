@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour {
 
 	private SoundManager m_pSM;
 
+	private Vector3[] mostRecentPositions;
+
+	private int posArrIndex = 0;
 
 	bool hasRedFairy = false;
 	bool hasBlueFairy = false ;
@@ -115,6 +118,9 @@ public class PlayerController : MonoBehaviour {
 		initialRotation = gameObject.transform.rotation;
 		initialPosition = gameObject.transform.position;
 
+		mostRecentPositions = new Vector3[5];
+		SetPosAverageToCurrent();
+
 	}
 	
 	// Update is called once per frame
@@ -123,6 +129,7 @@ public class PlayerController : MonoBehaviour {
 		HandleInput();
 		Move();
 		UpdateDisplay();
+		CalcRunningAverageAndMoveModel();
 		m_velocity = Vector3.zero;
 	}
 
@@ -465,7 +472,7 @@ public class PlayerController : MonoBehaviour {
 	void Respawn()
 	{
 		gameObject.transform.position = initialPosition;
-		gameObject.transform.rotation = initialRotation;
+		SetPosAverageToCurrent();
 	}
 
 	public void Respawn_COMMAND()
@@ -644,6 +651,32 @@ public class PlayerController : MonoBehaviour {
 		return tailCount;
 	}
 
+	private void CalcRunningAverageAndMoveModel()
+	{
+		if(m_modelObject!=null)
+		{
+			mostRecentPositions[posArrIndex] = gameObject.transform.position;
+			posArrIndex = (posArrIndex+1)%mostRecentPositions.Length;
+			Vector3 avg = Vector3.zero;
+			for(int i=0; i< mostRecentPositions.Length; i++)
+			{
+				avg += mostRecentPositions[i];
+			}
+			avg /= (float)mostRecentPositions.Length;
+
+			m_modelObject.transform.position = new Vector3(avg.x,m_modelObject.transform.position.y,avg.z);
+		}
+	}
+
+
+	private void SetPosAverageToCurrent()
+	{
+		for(int i = 0; i< mostRecentPositions.Length; i++)
+		{
+			mostRecentPositions[i] = gameObject.transform.position;
+		}
+	}
+
 }
 
 public class ProjectileContainer
@@ -674,5 +707,6 @@ public class ProjectileContainer
 		if(Time.time> whenItCanFireAgain) return true;
 		else return false;
 	}
+
 
 }
