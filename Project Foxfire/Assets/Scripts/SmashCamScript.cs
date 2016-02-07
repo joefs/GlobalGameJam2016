@@ -12,7 +12,7 @@ public class SmashCamScript : MonoBehaviour {
 
 	float maxOrth = 10.0f;
 
-	float minOrth = 3.0f;
+	float minOrth = 4.0f;
 
 	Vector3 initialPos;
 
@@ -42,8 +42,10 @@ public class SmashCamScript : MonoBehaviour {
 
 	float initialOrthSize;
 
+	static float initHypotenuse;
 
-	float zoomSpeed = 2f;
+
+	float zoomSpeed = 4f;
 
 
 	public static void AddTrackChar(GameObject pGO)
@@ -51,6 +53,57 @@ public class SmashCamScript : MonoBehaviour {
 		if(trackChars == null) trackChars = new List<GameObject>();
 		trackChars.Add(pGO);
 		isInitialized = true;
+
+		CalcInitHyp();
+	}
+
+
+	static void CalcInitHyp()
+	{
+
+		Vector3 avg = Vector3.zero;
+		for(int i =0; i< trackChars.Count; i++)
+		{
+			avg += trackChars[0].transform.position;
+		}
+		if(trackChars!=null && trackChars.Count!= 0) avg /= (float) trackChars.Count;
+
+
+
+		float highPoint = avg.z; 
+		float lowPoint = avg.z;
+		float leftPoint = avg.x;
+		float rightPoint = avg.x;
+
+		Vector3 curPos;
+		for(int i = 0; i< trackChars.Count; i++)
+		{
+			curPos = trackChars[i].transform.position;
+			
+			if(curPos.x>rightPoint)
+			{
+				rightPoint = curPos.x;
+			}
+			if(curPos.x < leftPoint)
+			{
+				leftPoint = curPos.x;
+			}
+
+			if(curPos.z>highPoint)
+			{
+				highPoint = curPos.z;
+			}
+			if(curPos.z < lowPoint)
+			{
+				lowPoint = curPos.z;
+			}
+			
+		}
+
+		float width = rightPoint - leftPoint;
+		float height = highPoint - lowPoint;
+
+		initHypotenuse = Mathf.Sqrt((width * width)+ (height * height));
 	}
 
 	// Use this for initialization
@@ -76,8 +129,8 @@ public class SmashCamScript : MonoBehaviour {
 	void Update () {
 		if(isInitialized)
 		{
-			//ChangeCamPosition();
-			//AdjustCamZoom();
+			ChangeCamPosition();
+			AdjustCamZoom(ScaleBasis.HYPOTENUSE);
 		}
 	}
 
@@ -92,7 +145,8 @@ public class SmashCamScript : MonoBehaviour {
 		if(trackChars.Count != 0)
 		{
 			avgSum = posSum/((float)trackChars.Count);
-			if(Vector3.Magnitude(avgSum) > 10.0f) avgSum = avgSum.normalized * 10.0f;
+
+			if(Vector3.Magnitude(avgSum) > initHypotenuse/2.0f) avgSum = avgSum.normalized * (initHypotenuse/2.0f);// keep in the center region
 		}
 
 		//Debug.Log(Vector3.Distance(camGO.transform.position, avgSum));
@@ -106,7 +160,12 @@ public class SmashCamScript : MonoBehaviour {
 		}
 	}
 
-	private void AdjustCamZoom()
+
+
+	private enum ScaleBasis{WIDTH_OR_HEIGHT, HYPOTENUSE};
+
+
+	private void AdjustCamZoom(ScaleBasis pBasis)
 	{
 		// calc max player distance, x, y and determine the normalizing part of things
 		// set zoom as interpolation between two floats (the top one being he initial and the bottom being something else)
@@ -152,47 +211,62 @@ public class SmashCamScript : MonoBehaviour {
 			
 		}
 
-
-		float width = (rightPoint - leftPoint) + 2;
-
-		float height = (highPoint - lowPoint)+4;
-
-		float curRatio = width/height;
-
-		float desiredOrthographicSize;
-
-		if(curRatio > W_TO_H_RATIO)
+		if(pBasis == ScaleBasis.WIDTH_OR_HEIGHT)
 		{
-			//length is longer
-			if(longestLength == 0) longestLength = 0.01f;
-			desiredOrthographicSize = ((width)/longestLength) * (10 * (16.0f/9.0f) );
-			//Debug.Log("A");
-		}
-		else
-		{
-			// width is longer
-			if(highestHeight == 0) highestHeight = 0.01f;
-			desiredOrthographicSize =  ((height +8)/highestHeight)* 10;
-			//Debug.Log("B");
-		}
-			if(desiredOrthographicSize > maxOrth) desiredOrthographicSize = maxOrth;
-			if(desiredOrthographicSize < minOrth) desiredOrthographicSize = minOrth;
+			float width = (rightPoint - leftPoint) + 2;
+
+			float height = (highPoint - lowPoint)+4;
 
 
-		if(Mathf.Abs(camGO.GetComponent<Camera>().orthographicSize - desiredOrthographicSize) >1.0f)
-		{
-			if(desiredOrthographicSize > camGO.GetComponent<Camera>().orthographicSize )
+			float curRatio = width/height;
+
+			float desiredOrthographicSize;
+
+			if(curRatio > W_TO_H_RATIO)
 			{
-				camGO.GetComponent<Camera>().orthographicSize += zoomSpeed * Time.deltaTime;
+				//length is longer
+				if(longestLength == 0) longestLength = 0.01f;
+				desiredOrthographicSize = ((width)/longestLength) * (10 * (16.0f/9.0f) );
+				//Debug.Log("A");
 			}
 			else
 			{
+				// width is longer
+				if(highestHeight == 0) highestHeight = 0.01f;
+				desiredOrthographicSize =  ((height +8)/highestHeight)* 10;
+				//Debug.Log("B");
+			}
+		}
+		else if(pBasis == ScaleBasis.HYPOTENUSE)
+		{
 
-				camGO.GetComponent<Camera>().orthographicSize -= zoomSpeed * Time.deltaTime;
+			float width = (rightPoint - leftPoint) + 4;
+			float height = (highPoint - lowPoint) * 1.8f;
+
+			float desiredOrthographicSize = (Mathf.Sqrt((width * width)+ (height * height)) / initHypotenuse) * initialOrthSize;
+
+
+
+				if(desiredOrthographicSize > maxOrth-2) desiredOrthographicSize = maxOrth;
+				if(desiredOrthographicSize < minOrth) desiredOrthographicSize = minOrth;
+
+
+			if(Mathf.Abs(camGO.GetComponent<Camera>().orthographicSize - desiredOrthographicSize) >1.0f)
+			{
+				if(desiredOrthographicSize > camGO.GetComponent<Camera>().orthographicSize )
+				{
+					camGO.GetComponent<Camera>().orthographicSize += zoomSpeed * Time.deltaTime;
+				}
+				else
+				{
+
+					camGO.GetComponent<Camera>().orthographicSize -= zoomSpeed * Time.deltaTime;
+				}
 			}
 
-			//Debug.Log(			desiredOrthographicSize);
 		}
+
+
 
 	}
 }
