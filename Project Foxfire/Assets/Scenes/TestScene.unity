@@ -933,7 +933,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.52
+      value: 5.4756
       objectReference: {fileID: 0}
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -970,6 +970,10 @@ Prefab:
     - target: {fileID: 195862, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_Name
       value: 4 Tile Wall Piece (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.59999996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
@@ -3071,7 +3075,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445498, guid: a13df0d6648382b428b728bc36ddc709, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 445498, guid: a13df0d6648382b428b728bc36ddc709, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4409,7 +4413,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 868611352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -4657,7 +4661,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948645939}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -4705,7 +4709,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.05
+      value: -2.0986
       objectReference: {fileID: 0}
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4738,6 +4742,10 @@ Prefab:
     - target: {fileID: 455208, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5625008
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
@@ -4782,7 +4790,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988780809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -7128,7 +7136,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.6
+      value: 2.5598
       objectReference: {fileID: 0}
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7165,6 +7173,10 @@ Prefab:
     - target: {fileID: 195862, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_Name
       value: 4 Tile Wall Piece (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.6374999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
@@ -7215,7 +7227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445498, guid: a13df0d6648382b428b728bc36ddc709, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 445498, guid: a13df0d6648382b428b728bc36ddc709, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7837,7 +7849,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.97
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -8803,7 +8815,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.83
+      value: -4.8786
       objectReference: {fileID: 0}
     - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8840,6 +8852,10 @@ Prefab:
     - target: {fileID: 195862, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
       propertyPath: m_Name
       value: 4 Tile Wall Piece (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 443654, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5625002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26e01555b2f8ec54e8d2d646af7350e7, type: 2}
@@ -9146,7 +9162,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1841664812}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
